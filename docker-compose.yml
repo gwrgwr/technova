@@ -1,0 +1,40 @@
+services:
+  db:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+        - mongo_data:/data/db
+    hostname: mongodb
+    networks:
+        - technova
+    environment:
+        - MONGO_INITDB_ROOT_USERNAME=admin
+        - MONGO_INITDB_ROOT_PASSWORD=admin
+    restart: always
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    volumes:
+        - rabbitmq_data:/var/lib/rabbitmq
+    hostname: rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    networks:
+        - technova
+    environment:
+        - RABBITMQ_DEFAULT_USER=admin
+        - RABBITMQ_DEFAULT_PASS=admin
+    restart: always
+
+volumes:
+    mongo_data:
+        driver: local
+    rabbitmq_data:
+        driver: local
+networks:
+    technova:
+        driver: bridge
