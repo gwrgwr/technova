@@ -64,7 +64,7 @@ Se no seu terminal, retornou estes comandos, o seu minikube está configurado e 
 
 #### Antes de começar a usar a aplicação
 
-Um último comando é necessário para ser rodado. No repositório local (após ter dado `git clone https://github.com/gwrgwr/technova.git`), percebe-se que há uma pasta chamada "k8s". Esta pasta contém todos os scripts necessários para que você consiga iniciar a aplicação localmente. O comando utilizado para rodar esses arquivos é:
+Um último comando é necessário para ser rodado. No repositório local (após ter dado `git clone https://github.com/gwrgwr/technova.git`), percebe-se que há uma pasta chamada "k8s". Esta pasta contém todos os scripts necessários para que você consiga iniciar a aplicação localmente. O comando utilizado para rodar esses arquivos é (no root da aplicação):
 
 ```bash
 kubectl apply -f k8s/
