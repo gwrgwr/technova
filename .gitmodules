@@ -1,0 +1,15 @@
+[submodule "vendor"]
+	path = vendor
+	url = https://github.com/gwrgwr/technova-ms-vendor.git
+[submodule "gateway"]
+	path = gateway
+	url = https://github.com/gwrgwr/technova-api-gateway.git
+[submodule "product"]
+	path = product
+	url = https://github.com/gwrgwr/technova-ms-product.git
+[submodule "user"]
+	path = user
+	url = https://github.com/gwrgwr/technova-ms-user.git
+[submodule "common"]
+	path = common
+	url = https://github.com/gwrgwr/technova-common.git
